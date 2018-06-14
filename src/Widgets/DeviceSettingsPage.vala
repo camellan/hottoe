@@ -74,6 +74,9 @@ public class Hottoe.Widgets.DeviceSettingsPage : Granite.SettingsPage {
         status_switch.halign = Gtk.Align.END;
         status_switch.valign = Gtk.Align.CENTER;
         header_area.attach (status_switch, 2, 0, 1, 1);
+        var def_label = new Gtk.Label (_("Set as default"));
+        def_label.get_style_context ().add_class ("h4");
+        header_area.attach (def_label, 3, 0, 1, 1);
         status_switch.button_press_event.connect (() => {
             return status_switch.active;
         });
